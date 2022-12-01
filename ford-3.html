@@ -47,7 +47,25 @@
 <link rel="stylesheet" href="https://www.ford.com/cmslibs/etc/designs/common/core/skin/ford.min.css" type="text/css">
 <link rel="stylesheet" href="https://www.ford.com/cmslibs/etc/designs/common/vendor/bootstrap.min.css" type="text/css">
 <link rel="stylesheet" href="https://www.ford.com/cmslibs/etc/designs/brand_ford/brand/skin/ford.min.css" type="text/css"> 
-<script src="https://www.ford.com/cmslibs/etc/designs/brand_ford/brand/vendor/lazysizes.min.js" async></script>
+<script>
+/*
+ lazysizes - v3.0.0-rc2 */
+ !function(h,e){e=e(h,h.document);h.lazySizes=e;"object"==typeof module&&module.exports&&(module.exports=e)}(window,function(h,e){if(e.getElementsByClassName){var c,z=e.documentElement,A=h.Date,V=h.HTMLPictureElement,B=h.addEventListener,n=h.setTimeout,W=h.requestAnimationFrame||n,u=h.requestIdleCallback,ba=/^picture$/i,X=["load","error","lazyincluded","_lazyloaded"],t={},ia=Array.prototype.forEach,J=function(a,b){return t[b]||(t[b]=new RegExp("(\\s|^)"+b+"(\\s|$)")),t[b].test(a.getAttribute("class")||
+"")&&t[b]},K=function(a,b){J(a,b)||a.setAttribute("class",(a.getAttribute("class")||"").trim()+" "+b)},Y=function(a,b){var d;(d=J(a,b))&&a.setAttribute("class",(a.getAttribute("class")||"").replace(d," "))},D=function(a,b,d){var c=d?"addEventListener":"removeEventListener";d&&D(a,b);X.forEach(function(d){a[c](d,b)})},L=function(a,b,d,c,g){var l=e.createEvent("CustomEvent");return l.initCustomEvent(b,!c,!g,d||{}),a.dispatchEvent(l),l},Z=function(a,b){var d;!V&&(d=h.picturefill||c.pf)?d({reevaluate:!0,
+elements:[a]}):b&&b.src&&(a.src=b.src)},M=function(a,b,d){for(d=d||a.offsetWidth;d<c.minSize&&b&&!a._lazysizesWidth;)d=b.offsetWidth,b=b.parentNode;return d},E=function(){var a,b,c=[],p=[],g=function(){var d=c;c=p;a=!0;for(b=!1;d.length;)d.shift()();a=!1},l=function(d,l){a&&!l?d.apply(this,arguments):(c.push(d),b||(b=!0,(e.hidden?n:W)(g)))};return l._lsFlush=g,l}(),N=function(a,b){return b?function(){E(a)}:function(){var b=this,c=arguments;E(function(){a.apply(b,c)})}},ja=function(a){var b,c=0,e=
+666,g=function(){b=!1;c=A.now();a()},l=u?function(){u(g,{timeout:e});666!==e&&(e=666)}:N(function(){n(g)},!0);return function(a){var d;(a=!0===a)&&(e=44);b||(b=!0,d=125-(A.now()-c),0>d&&(d=0),a||9>d&&u?l():n(l,d))}},da=function(a){var b,c,e=function(){b=null;a()},g=function(){var a=A.now()-c;99>a?n(g,99-a):(u||e)(e)};return function(){c=A.now();b||(b=n(g,99))}},U=function(){var a,b,d,p,g,l,x,ca,F,G,H,I,u,t,w,M=/^img$/i,U=/^iframe$/i,V="onscroll"in h&&!/glebot/.test(navigator.userAgent),O=0,q=0,C=
+-1,P=function(f){q--;f&&f.target&&D(f.target,P);(!f||0>q||!f.target)&&(q=0)},ea=function(){var f,l,h,v,k,Q,n;if((g=c.loadMode)&&8>q&&(f=a.length)){var r=0;C++;null==t&&("expand"in c||(c.expand=500<z.clientHeight&&500<z.clientWidth?500:370),u=c.expand,t=u*c.expFactor);for(t>O&&1>q&&2<C&&2<g&&!e.hidden?(O=t,C=0):O=1<g&&1<C&&6>q?u:0;f>r;r++)if(a[r]&&!a[r]._lazyRace)if(V){(Q=a[r].getAttribute("data-expand"))&&(v=1*Q)||(v=O);n!==v&&(x=innerWidth+v*w,ca=innerHeight+v,k=-1*v,n=v);var m=a[r].getBoundingClientRect();
+if((m=(I=m.bottom)>=k&&(F=m.top)<=ca&&(H=m.right)>=k*w&&(G=m.left)<=x&&(I||H||G||F))&&!(m=d&&3>q&&!Q&&(3>g||4>C))){m=void 0;var y=a[r],R=v,p=y;y="hidden"==(getComputedStyle(e.body,null)||{}).visibility||"hidden"!=(getComputedStyle(y,null)||{}).visibility;F-=R;I+=R;G-=R;for(H+=R;y&&(p=p.offsetParent)&&p!=e.body&&p!=z;)(y=0<((getComputedStyle(p,null)||{}).opacity||1))&&"visible"!=(getComputedStyle(p,null)||{}).overflow&&(m=p.getBoundingClientRect(),y=H>m.left&&G<m.right&&I>m.top-1&&F<m.bottom+1);m=
+y}if(m){if(S(a[r]),h=!0,9<q)break}else!h&&d&&!l&&4>q&&4>C&&2<g&&(b[0]||c.preloadAfterLoad)&&(b[0]||!Q&&(I||H||G||F||"auto"!=a[r].getAttribute(c.sizesAttr)))&&(l=b[0]||a[r])}else S(a[r]);l&&!h&&S(l)}},k=ja(ea),ha=function(f){K(f.target,c.loadedClass);Y(f.target,c.loadingClass);D(f.target,fa)},W=N(ha),fa=function(f){W({target:f.target})},X=function(f,a){try{f.contentWindow.location.replace(a)}catch(ma){f.src=a}},ka=function(f){var a,b,d=f.getAttribute(c.srcsetAttr);(a=c.customMedia[f.getAttribute("data-media")||
+f.getAttribute("media")])&&f.setAttribute("media",a);d&&f.setAttribute("srcset",d);a&&(b=f.parentNode,b.insertBefore(f.cloneNode(),f),b.removeChild(f))},la=N(function(a,b,d,g,l){var f,e,h,m,k,x;(k=L(a,"lazybeforeunveil",b)).defaultPrevented||(g&&(d?K(a,c.autosizesClass):a.setAttribute("sizes",g)),e=a.getAttribute(c.srcsetAttr),f=a.getAttribute(c.srcAttr),l&&(h=a.parentNode,m=h&&ba.test(h.nodeName||"")),x=b.firesLoad||"src"in a&&(e||f||m),k={target:a},x&&(D(a,P,!0),clearTimeout(p),p=n(P,2500),K(a,
+c.loadingClass),D(a,fa,!0)),m&&ia.call(h.getElementsByTagName("source"),ka),e?a.setAttribute("srcset",e):f&&!m&&(U.test(a.nodeName)?X(a,f):a.src=f),(e||m)&&Z(a,{src:f}));a._lazyRace&&delete a._lazyRace;Y(a,c.lazyClass);E(function(){x&&!a.complete||(x?P(k):q--,ha(k))},!0)}),S=function(a){var b,f=M.test(a.nodeName),g=f&&(a.getAttribute(c.sizesAttr)||a.getAttribute("sizes")),e="auto"==g;(!e&&d||!f||!a.src&&!a.srcset||a.complete||J(a,c.errorClass))&&(b=L(a,"lazyunveilread").detail,e&&aa.updateElem(a,
+!0,a.offsetWidth),a._lazyRace=!0,q++,la(a,b,e,g,f))},T=function(){if(!d){if(999>A.now()-l)return void n(T,999);var a=da(function(){c.loadMode=3;k()});d=!0;c.loadMode=3;k();B("scroll",function(){3==c.loadMode&&(c.loadMode=2);a()},!0)}};return{_:function(){l=A.now();a=e.getElementsByClassName(c.lazyClass);b=e.getElementsByClassName(c.lazyClass+" "+c.preloadClass);w=c.hFac;B("scroll",k,!0);B("resize",k,!0);h.MutationObserver?(new MutationObserver(k)).observe(z,{childList:!0,subtree:!0,attributes:!0}):
+(z.addEventListener("DOMNodeInserted",k,!0),z.addEventListener("DOMAttrModified",k,!0),setInterval(k,999));B("hashchange",k,!0);"focus mouseover click load transitionend animationend webkitAnimationEnd".split(" ").forEach(function(a){e.addEventListener(a,k,!0)});/d$|^c/.test(e.readyState)?T():(B("load",T),e.addEventListener("DOMContentLoaded",k),n(T,2E4));a.length?(ea(),E._lsFlush()):k()},checkElems:k,unveil:S}}(),aa=function(){var a,b=N(function(a,b,c,d){var e;if(a._lazysizesWidth=d,d+="px",a.setAttribute("sizes",
+d),ba.test(b.nodeName||"")){b=b.getElementsByTagName("source");var g=0;for(e=b.length;e>g;g++)b[g].setAttribute("sizes",d)}c.detail.dataAttr||Z(a,c.detail)}),d=function(a,c,d){var e,g=a.parentNode;g&&(d=M(a,g,d),e=L(a,"lazybeforesizes",{width:d,dataAttr:!!c}),e.defaultPrevented||(d=e.detail.width,d&&d!==a._lazysizesWidth&&b(a,g,e,d)))},h=da(function(){var b,c=a.length;if(c)for(b=0;c>b;b++)d(a[b])});return{_:function(){a=e.getElementsByClassName(c.autosizesClass);B("resize",h)},checkElems:h,updateElem:d}}(),
+w=function(){w.i||(w.i=!0,aa._(),U._())};return function(){var a,b={lazyClass:"lazyload",loadedClass:"lazyloaded",loadingClass:"lazyloading",preloadClass:"lazypreload",errorClass:"lazyerror",autosizesClass:"lazyautosizes",srcAttr:"data-src",srcsetAttr:"data-srcset",sizesAttr:"data-sizes",minSize:40,customMedia:{},init:!0,expFactor:1.5,hFac:.8,loadMode:1};c=h.lazySizesConfig||h.lazysizesConfig||{};for(a in b)a in c||(c[a]=b[a]);h.lazySizesConfig=c;n(function(){c.init&&w()})}(),{cfg:c,autoSizer:aa,
+loader:U,init:w,uP:Z,aC:K,rC:Y,hC:J,fire:L,gW:M,rAF:E}}});
+</script>
+
 <script>
     window.FD = window.FD || {};
     FD.Brand = FD.Brand || {};
@@ -8021,233 +8039,6 @@
                 <div class="cta-wrap">
                     <a class="btn btn-primary add-hover default-hover  " aria-label="Check out the Maverick Tremor" target="_self" href="https://www.ford.com/trucks/maverick/2022/?intcmp=hp-bb-vhp-maverick-tremor#tremor" tabindex="0">
 					   <span class="cta-text">Maverick<sup>®</sup> Tremor<sup>®</sup> </span>
-					   
-                       
-                       
-				    </a>
-				</div>
-                
-				
-            </div>
-        </div>
-    </div>
-</li>
-                    
-                        
-
-<li class="features-carousel-slide item brand-ds-style " data-fd-target-component="featuresCarouselSlide" data-dynamic-disclosure-enable data-fgx-features-carousel-slide>
-    
-    <div class="card-inner-wrap" data-overlay-item-parent>
-        <div class="billboard-img card-media-wrap" data-overlay-item="{&#34;image&#34;:{&#34;primaryImage&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/News_desktop_2.jpg&#34;,&#34;secondaryImage&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/mobile/News_mobile.jpg&#34;,&#34;useSecondary&#34;:true,&#34;altTag&#34;:&#34;A Ford F-150 Raptor R drives over sandy, uneven terrain.&#34;,&#34;sources&#34;:[{&#34;breakpoint&#34;:1440,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/News_desktop_2.jpg/jcr:content/renditions/cq5dam.web.2160.2160.jpeg&#34;,&#34;defaultSource&#34;:false,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 1440px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;},{&#34;breakpoint&#34;:992,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/News_desktop_2.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg&#34;,&#34;defaultSource&#34;:true,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 992px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;},{&#34;breakpoint&#34;:768,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/mobile/News_mobile.jpg/jcr:content/renditions/cq5dam.web.768.768.jpeg&#34;,&#34;defaultSource&#34;:false,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 768px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR42mNgAAIAAAUAAen63NgAAAAASUVORK5CYII=&#34;},{&#34;breakpoint&#34;:1,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/mobile/News_mobile.jpg/jcr:content/renditions/cq5dam.web.470.470.jpeg&#34;,&#34;defaultSource&#34;:false,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 1px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR42mNgAAIAAAUAAen63NgAAAAASUVORK5CYII=&#34;}],&#34;defaultSource&#34;:{&#34;breakpoint&#34;:992,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/News_desktop_2.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg&#34;,&#34;defaultSource&#34;:true,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 992px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;},&#34;views&#34;:{&#34;Overlay&#34;:[{&#34;breakpoint&#34;:480,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/News_desktop_2.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg&#34;,&#34;defaultSource&#34;:true,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 480px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;},{&#34;breakpoint&#34;:1,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/News_desktop_2.jpg/jcr:content/renditions/cq5dam.web.470.470.jpeg&#34;,&#34;defaultSource&#34;:false,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 1px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;}],&#34;FullScreen&#34;:[{&#34;breakpoint&#34;:480,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/News_desktop_2.jpg/jcr:content/renditions/cq5dam.web.3840.3840.jpeg&#34;,&#34;defaultSource&#34;:true,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 480px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;},{&#34;breakpoint&#34;:1,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/News_desktop_2.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg&#34;,&#34;defaultSource&#34;:false,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 1px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;}],&#34;Download&#34;:[{&#34;breakpoint&#34;:1,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/News_desktop_2.jpg/jcr:content/renditions/cq5dam.web.3840.3840.jpeg&#34;,&#34;defaultSource&#34;:true,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 1px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;}]}},&#34;headline&#34;:&#34;Take On the Toughest Terrain&#34;,&#34;headlineStyle&#34;:&#34;fgx-brand-ds title-three ff-b&#34;,&#34;description&#34;:&#34;&lt;div style=\&#34;text-align: left;\&#34;>Push your off-road limits in the new F-150® Raptor R&lt;sup>™*&lt;/sup>&lt;/div>\r\n&#34;,&#34;disclosures&#34;:&#34;*Preproduction model shown&#34;,&#34;ctas&#34;:[{&#34;text&#34;:&#34;Capture a Raptor R&#34;,&#34;url&#34;:&#34;/content/brand_ford/en_us/brand/f150-raptor-r/2023.html?intcmp=hp-cta-splash-f150-raptor&#34;,&#34;target&#34;:&#34;_self&#34;,&#34;cssClass&#34;:&#34;btn btn-primary&#34;,&#34;ariaLabel&#34;:&#34;Check out the Ford F-150 Raptor R&#34;}],&#34;metrics&#34;:{}}" data-overlay-item-trigger=".img-wrapper img" tabindex="0" role="button" data-fgx-keypress="true" data-fgx-billboard-img>
-            <div class="img-wrapper">
-                
-                    
-    <picture>
-        <!--[if IE 9]><video style="display: none;"><![endif]-->
-        
-            <source srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==" data-srcset="https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/re-hp/desktop/News_desktop_2.jpg/jcr:content/renditions/cq5dam.web.2160.2160.jpeg" media="(min-width: 1440px)"/>
-        
-            <source srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==" data-srcset="https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/re-hp/desktop/News_desktop_2.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg" media="(min-width: 992px)"/>
-        
-            <source srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR42mNgAAIAAAUAAen63NgAAAAASUVORK5CYII=" data-srcset="https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/re-hp/mobile/News_mobile.jpg/jcr:content/renditions/cq5dam.web.768.768.jpeg" media="(min-width: 768px)"/>
-        
-            <source srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR42mNgAAIAAAUAAen63NgAAAAASUVORK5CYII=" data-srcset="https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/re-hp/mobile/News_mobile.jpg/jcr:content/renditions/cq5dam.web.470.470.jpeg" media="(min-width: 1px)"/>
-        
-        <!--[if IE 9]></video><![endif]-->
-        <img src="https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/re-hp/desktop/News_desktop_2.jpg/_jcr_content/renditions/cq5dam.web.1440.1440.jpeg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==" data-srcset="https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/re-hp/desktop/News_desktop_2.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg" class="lazyload " alt="A Ford F-150 Raptor R drives over sandy, uneven terrain."/>
-        
-    </picture>
-
-                
-            </div>
-            
-        </div>
-        <div class="lower-wrap card-content-wrap fgx-brand-global-container-pad">
-            <h3 class="feature-carousel-slide-subheadline fgx-brand-ds title-three ff-b fgx-brand-exlt-h2 fgx-brand-feat-h2-sm card-title">Take On the Toughest Terrain</h3>
-            <div class=" slide-txt-wrap card-info-container">
-                <div class="ml-wrapper card-info add-btm-space">
-                    <span class="description mltext fgx-brand-feat-body-copy fgx-brand-ds body-one ff-b"><div style="text-align: left;">Push your off-road limits in the new F-150® Raptor R<sup>™*</sup></div>
-</span>
-                    <span class="description mltext description-more fgx-brand-feat-body-copy fgx-brand-ds body-one ff-b" style="display: none"><a href="javascript:void(0);" role="button" data-fgx-keypress="true" style="cursor:pointer;" class="lessDesc" data-fd-target-skip> ...less</a></span>
-                </div>
-                <div class="slide-disc-wrapper card-info">
-                    
-                    
-                    <span class="slide-disc fgx-moveable-disclosure fgx-brand-ds caption-one ff-b">*Preproduction model shown</span>
-                </div>
-            </div>
-            <div class="card-footer-container brand-ds-icons ">
-                <div class="cta-wrap">
-                    <a class="btn btn-primary add-hover default-hover  " aria-label="Check out the Ford F-150 Raptor R" target="_self" href="https://www.ford.com/f150-raptor-r/2023/?intcmp=hp-cta-splash-f150-raptor" tabindex="0">
-					   <span class="cta-text">Capture a Raptor R </span>
-					   
-                       
-                       
-				    </a>
-				</div>
-                
-				
-            </div>
-        </div>
-    </div>
-</li>
-                    
-                        
-
-<li class="features-carousel-slide item brand-ds-style " data-fd-target-component="featuresCarouselSlide" data-dynamic-disclosure-enable data-fgx-features-carousel-slide>
-    
-    <div class="card-inner-wrap" data-overlay-item-parent>
-        <div class="billboard-img card-media-wrap" data-overlay-item="{&#34;image&#34;:{&#34;primaryImage&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/heritage_desktop.jpg&#34;,&#34;secondaryImage&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/mobile/Heritage_mobile.jpg&#34;,&#34;useSecondary&#34;:true,&#34;altTag&#34;:&#34;A Ford F-150 Heritage Edition is hauling a boat by a launch pad.&#34;,&#34;sources&#34;:[{&#34;breakpoint&#34;:1440,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/heritage_desktop.jpg/jcr:content/renditions/cq5dam.web.2160.2160.jpeg&#34;,&#34;defaultSource&#34;:false,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 1440px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;},{&#34;breakpoint&#34;:992,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/heritage_desktop.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg&#34;,&#34;defaultSource&#34;:true,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 992px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;},{&#34;breakpoint&#34;:768,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/mobile/Heritage_mobile.jpg/jcr:content/renditions/cq5dam.web.768.768.jpeg&#34;,&#34;defaultSource&#34;:false,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 768px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR42mNgAAIAAAUAAen63NgAAAAASUVORK5CYII=&#34;},{&#34;breakpoint&#34;:1,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/mobile/Heritage_mobile.jpg/jcr:content/renditions/cq5dam.web.470.470.jpeg&#34;,&#34;defaultSource&#34;:false,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 1px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR42mNgAAIAAAUAAen63NgAAAAASUVORK5CYII=&#34;}],&#34;defaultSource&#34;:{&#34;breakpoint&#34;:992,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/heritage_desktop.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg&#34;,&#34;defaultSource&#34;:true,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 992px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;},&#34;views&#34;:{&#34;Overlay&#34;:[{&#34;breakpoint&#34;:480,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/heritage_desktop.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg&#34;,&#34;defaultSource&#34;:true,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 480px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;},{&#34;breakpoint&#34;:1,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/heritage_desktop.jpg/jcr:content/renditions/cq5dam.web.470.470.jpeg&#34;,&#34;defaultSource&#34;:false,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 1px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;}],&#34;FullScreen&#34;:[{&#34;breakpoint&#34;:480,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/heritage_desktop.jpg/jcr:content/renditions/cq5dam.web.3840.3840.jpeg&#34;,&#34;defaultSource&#34;:true,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 480px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;},{&#34;breakpoint&#34;:1,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/heritage_desktop.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg&#34;,&#34;defaultSource&#34;:false,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 1px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;}],&#34;Download&#34;:[{&#34;breakpoint&#34;:1,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/heritage_desktop.jpg/jcr:content/renditions/cq5dam.web.3840.3840.jpeg&#34;,&#34;defaultSource&#34;:true,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 1px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;}]}},&#34;headline&#34;:&#34;&lt;div style=\&#34;text-align: left;\&#34;>A Powerful Legacy&lt;/div>\r\n&#34;,&#34;headlineStyle&#34;:&#34;fgx-brand-ds title-three ff-b&#34;,&#34;description&#34;:&#34;&lt;div style=\&#34;text-align: left;\&#34;>Celebrating 75 years and 40 million trucks.&lt;/div>\r\n&#34;,&#34;disclosures&#34;:&#34;&#34;,&#34;ctas&#34;:[{&#34;text&#34;:&#34;F-150 Heritage Edition&#34;,&#34;url&#34;:&#34;/content/brand_ford/en_us/brand/trucks/f150/2022.html?intcmp=hp-cta-f-150&#34;,&#34;target&#34;:&#34;_self&#34;,&#34;cssClass&#34;:&#34;btn btn-primary&#34;,&#34;ariaLabel&#34;:&#34;Click learn about the F-150 Heritage Edition&#34;}],&#34;metrics&#34;:{}}" data-overlay-item-trigger=".img-wrapper img" tabindex="0" role="button" data-fgx-keypress="true" data-fgx-billboard-img>
-            <div class="img-wrapper">
-                
-                    
-    <picture>
-        <!--[if IE 9]><video style="display: none;"><![endif]-->
-        
-            <source srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==" data-srcset="https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/re-hp/desktop/heritage_desktop.jpg/jcr:content/renditions/cq5dam.web.2160.2160.jpeg" media="(min-width: 1440px)"/>
-        
-            <source srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==" data-srcset="https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/re-hp/desktop/heritage_desktop.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg" media="(min-width: 992px)"/>
-        
-            <source srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR42mNgAAIAAAUAAen63NgAAAAASUVORK5CYII=" data-srcset="https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/re-hp/mobile/Heritage_mobile.jpg/jcr:content/renditions/cq5dam.web.768.768.jpeg" media="(min-width: 768px)"/>
-        
-            <source srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR42mNgAAIAAAUAAen63NgAAAAASUVORK5CYII=" data-srcset="https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/re-hp/mobile/Heritage_mobile.jpg/jcr:content/renditions/cq5dam.web.470.470.jpeg" media="(min-width: 1px)"/>
-        
-        <!--[if IE 9]></video><![endif]-->
-        <img src="https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/re-hp/desktop/heritage_desktop.jpg/_jcr_content/renditions/cq5dam.web.1440.1440.jpeg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==" data-srcset="https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/re-hp/desktop/heritage_desktop.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg" class="lazyload " alt="A Ford F-150 Heritage Edition is hauling a boat by a launch pad."/>
-        
-    </picture>
-
-                
-            </div>
-            
-        </div>
-        <div class="lower-wrap card-content-wrap fgx-brand-global-container-pad">
-            <h3 class="feature-carousel-slide-subheadline fgx-brand-ds title-three ff-b fgx-brand-exlt-h2 fgx-brand-feat-h2-sm card-title"><div style="text-align: left;">A Powerful Legacy</div>
-</h3>
-            <div class=" slide-txt-wrap card-info-container">
-                <div class="ml-wrapper card-info ">
-                    <span class="description mltext fgx-brand-feat-body-copy fgx-brand-ds body-one ff-b"><div style="text-align: left;">Celebrating 75 years and 40 million trucks.</div>
-</span>
-                    <span class="description mltext description-more fgx-brand-feat-body-copy fgx-brand-ds body-one ff-b" style="display: none"><a href="javascript:void(0);" role="button" data-fgx-keypress="true" style="cursor:pointer;" class="lessDesc" data-fd-target-skip> ...less</a></span>
-                </div>
-                
-            </div>
-            <div class="card-footer-container brand-ds-icons ">
-                <div class="cta-wrap">
-                    <a class="btn btn-primary add-hover default-hover  " aria-label="Click learn about the F-150 Heritage Edition" target="_self" href="https://www.ford.com/trucks/f150/2022/?intcmp=hp-cta-f-150" tabindex="0">
-					   <span class="cta-text">F-150 Heritage Edition </span>
-					   
-                       
-                       
-				    </a>
-				</div>
-                
-				
-            </div>
-        </div>
-    </div>
-</li>
-                    
-                        
-
-<li class="features-carousel-slide item brand-ds-style " data-fd-target-component="featuresCarouselSlide" data-dynamic-disclosure-enable data-fgx-features-carousel-slide>
-    
-    <div class="card-inner-wrap" data-overlay-item-parent>
-        <div class="billboard-img card-media-wrap" data-overlay-item="{&#34;image&#34;:{&#34;primaryImage&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/PickUp_Delivery_Desktop.jpg&#34;,&#34;secondaryImage&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/mobile/PU_mobile.jpg&#34;,&#34;useSecondary&#34;:true,&#34;altTag&#34;:&#34;A woman is looking down at a smartphone she’s holding&#34;,&#34;sources&#34;:[{&#34;breakpoint&#34;:1440,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/PickUp_Delivery_Desktop.jpg/jcr:content/renditions/cq5dam.web.2160.2160.jpeg&#34;,&#34;defaultSource&#34;:false,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 1440px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;},{&#34;breakpoint&#34;:992,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/PickUp_Delivery_Desktop.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg&#34;,&#34;defaultSource&#34;:true,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 992px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;},{&#34;breakpoint&#34;:768,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/mobile/PU_mobile.jpg/jcr:content/renditions/cq5dam.web.768.768.jpeg&#34;,&#34;defaultSource&#34;:false,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 768px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR42mNgAAIAAAUAAen63NgAAAAASUVORK5CYII=&#34;},{&#34;breakpoint&#34;:1,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/mobile/PU_mobile.jpg/jcr:content/renditions/cq5dam.web.470.470.jpeg&#34;,&#34;defaultSource&#34;:false,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 1px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR42mNgAAIAAAUAAen63NgAAAAASUVORK5CYII=&#34;}],&#34;defaultSource&#34;:{&#34;breakpoint&#34;:992,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/PickUp_Delivery_Desktop.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg&#34;,&#34;defaultSource&#34;:true,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 992px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;},&#34;views&#34;:{&#34;Overlay&#34;:[{&#34;breakpoint&#34;:480,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/PickUp_Delivery_Desktop.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg&#34;,&#34;defaultSource&#34;:true,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 480px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;},{&#34;breakpoint&#34;:1,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/PickUp_Delivery_Desktop.jpg/jcr:content/renditions/cq5dam.web.470.470.jpeg&#34;,&#34;defaultSource&#34;:false,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 1px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;}],&#34;FullScreen&#34;:[{&#34;breakpoint&#34;:480,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/PickUp_Delivery_Desktop.jpg/jcr:content/renditions/cq5dam.web.3840.3840.jpeg&#34;,&#34;defaultSource&#34;:true,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 480px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;},{&#34;breakpoint&#34;:1,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/PickUp_Delivery_Desktop.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg&#34;,&#34;defaultSource&#34;:false,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 1px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;}],&#34;Download&#34;:[{&#34;breakpoint&#34;:1,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/PickUp_Delivery_Desktop.jpg/jcr:content/renditions/cq5dam.web.3840.3840.jpeg&#34;,&#34;defaultSource&#34;:true,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 1px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;}]}},&#34;headline&#34;:&#34;Ford Pickup &amp;amp; Delivery&#34;,&#34;headlineStyle&#34;:&#34;fgx-brand-ds title-three ff-b&#34;,&#34;description&#34;:&#34;&lt;div style=\&#34;text-align: left;\&#34;>Now the roundtrip to and from the dealer is on us.&lt;/div>\r\n&#34;,&#34;disclosures&#34;:&#34;&#34;,&#34;ctas&#34;:[{&#34;text&#34;:&#34;Learn More&#34;,&#34;url&#34;:&#34;https://www.ford.com/service/ford-pickup-delivery-service/?intcmp=hp-cta-pdl&#34;,&#34;target&#34;:&#34;_self&#34;,&#34;cssClass&#34;:&#34;btn btn-primary&#34;,&#34;ariaLabel&#34;:&#34;Learn more about the benefits offered to FordPass® Rewards members&#34;}],&#34;metrics&#34;:{}}" data-overlay-item-trigger=".img-wrapper img" tabindex="0" role="button" data-fgx-keypress="true" data-fgx-billboard-img>
-            <div class="img-wrapper">
-                
-                    
-    <picture>
-        <!--[if IE 9]><video style="display: none;"><![endif]-->
-        
-            <source srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==" data-srcset="https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/re-hp/desktop/PickUp_Delivery_Desktop.jpg/jcr:content/renditions/cq5dam.web.2160.2160.jpeg" media="(min-width: 1440px)"/>
-        
-            <source srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==" data-srcset="https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/re-hp/desktop/PickUp_Delivery_Desktop.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg" media="(min-width: 992px)"/>
-        
-            <source srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR42mNgAAIAAAUAAen63NgAAAAASUVORK5CYII=" data-srcset="https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/re-hp/mobile/PU_mobile.jpg/jcr:content/renditions/cq5dam.web.768.768.jpeg" media="(min-width: 768px)"/>
-        
-            <source srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR42mNgAAIAAAUAAen63NgAAAAASUVORK5CYII=" data-srcset="https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/re-hp/mobile/PU_mobile.jpg/jcr:content/renditions/cq5dam.web.470.470.jpeg" media="(min-width: 1px)"/>
-        
-        <!--[if IE 9]></video><![endif]-->
-        <img src="https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/re-hp/desktop/PickUp_Delivery_Desktop.jpg/_jcr_content/renditions/cq5dam.web.1440.1440.jpeg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==" data-srcset="https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/re-hp/desktop/PickUp_Delivery_Desktop.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg" class="lazyload " alt="A woman is looking down at a smartphone she’s holding"/>
-        
-    </picture>
-
-                
-            </div>
-            
-        </div>
-        <div class="lower-wrap card-content-wrap fgx-brand-global-container-pad">
-            <h3 class="feature-carousel-slide-subheadline fgx-brand-ds title-three ff-b fgx-brand-exlt-h2 fgx-brand-feat-h2-sm card-title">Ford Pickup &amp; Delivery</h3>
-            <div class=" slide-txt-wrap card-info-container">
-                <div class="ml-wrapper card-info ">
-                    <span class="description mltext fgx-brand-feat-body-copy fgx-brand-ds body-one ff-b"><div style="text-align: left;">Now the roundtrip to and from the dealer is on us.</div>
-</span>
-                    <span class="description mltext description-more fgx-brand-feat-body-copy fgx-brand-ds body-one ff-b" style="display: none"><a href="javascript:void(0);" role="button" data-fgx-keypress="true" style="cursor:pointer;" class="lessDesc" data-fd-target-skip> ...less</a></span>
-                </div>
-                
-            </div>
-            <div class="card-footer-container brand-ds-icons ">
-                <div class="cta-wrap">
-                    <a class="btn btn-primary add-hover default-hover  " aria-label="Learn more about the benefits offered to FordPass® Rewards members" target="_self" href="https://www.ford.com/service/ford-pickup-delivery-service/?intcmp=hp-cta-pdl" data-fd-metrics-click="{&#34;id&#34;:&#34;action0019&#34;,&#34;app&#34;:&#34;Brand&#34;,&#34;variables&#34;:{&#34;onclick_onclickLinkName&#34;:&#34;referral:exit&#34;,&#34;onclick_onclick&#34;:&#34;referral:flmo:owner:pdl&#34;,&#34;onclick_referredTo&#34;:&#34;flmo:owner:pdl&#34;,&#34;event_action&#34;:&#34;brand referral&#34;}}" tabindex="0">
-					   <span class="cta-text">Learn More </span>
-					   
-                       
-                       
-				    </a>
-				</div>
-                
-				
-            </div>
-        </div>
-    </div>
-</li>
-                    
-                        
-
-<li class="features-carousel-slide item brand-ds-style " data-fd-target-component="featuresCarouselSlide" data-dynamic-disclosure-enable data-fgx-features-carousel-slide>
-    
-    <div class="card-inner-wrap" data-overlay-item-parent>
-        <div class="billboard-img card-media-wrap" data-overlay-item="{&#34;image&#34;:{&#34;primaryImage&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/Strike_Anywhere_nn_Desktop.jpg&#34;,&#34;secondaryImage&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/mobile/F150_StrikeAnywhere_Mobile.jpg&#34;,&#34;useSecondary&#34;:true,&#34;altTag&#34;:&#34;A view of the front grille of a Lightning F-150 with headlights shining.&#34;,&#34;sources&#34;:[{&#34;breakpoint&#34;:1440,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/Strike_Anywhere_nn_Desktop.jpg/jcr:content/renditions/cq5dam.web.2160.2160.jpeg&#34;,&#34;defaultSource&#34;:false,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 1440px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;},{&#34;breakpoint&#34;:992,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/Strike_Anywhere_nn_Desktop.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg&#34;,&#34;defaultSource&#34;:true,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 992px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;},{&#34;breakpoint&#34;:768,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/mobile/F150_StrikeAnywhere_Mobile.jpg/jcr:content/renditions/cq5dam.web.768.768.jpeg&#34;,&#34;defaultSource&#34;:false,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 768px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR42mNgAAIAAAUAAen63NgAAAAASUVORK5CYII=&#34;},{&#34;breakpoint&#34;:1,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/mobile/F150_StrikeAnywhere_Mobile.jpg/jcr:content/renditions/cq5dam.web.470.470.jpeg&#34;,&#34;defaultSource&#34;:false,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 1px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR42mNgAAIAAAUAAen63NgAAAAASUVORK5CYII=&#34;}],&#34;defaultSource&#34;:{&#34;breakpoint&#34;:992,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/Strike_Anywhere_nn_Desktop.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg&#34;,&#34;defaultSource&#34;:true,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 992px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;},&#34;views&#34;:{&#34;Overlay&#34;:[{&#34;breakpoint&#34;:480,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/Strike_Anywhere_nn_Desktop.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg&#34;,&#34;defaultSource&#34;:true,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 480px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;},{&#34;breakpoint&#34;:1,&#34;resolution&#34;:&#34;&#34;,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/Strike_Anywhere_nn_Desktop.jpg/jcr:content/renditions/cq5dam.web.470.470.jpeg&#34;,&#34;defaultSource&#34;:false,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 1px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;}],&#34;FullScreen&#34;:[{&#34;breakpoint&#34;:480,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/Strike_Anywhere_nn_Desktop.jpg/jcr:content/renditions/cq5dam.web.3840.3840.jpeg&#34;,&#34;defaultSource&#34;:true,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 480px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;},{&#34;breakpoint&#34;:1,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/Strike_Anywhere_nn_Desktop.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg&#34;,&#34;defaultSource&#34;:false,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 1px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;}],&#34;Download&#34;:[{&#34;breakpoint&#34;:1,&#34;src&#34;:&#34;/content/dam/brand_ford/en_us/brand/re-hp/desktop/Strike_Anywhere_nn_Desktop.jpg/jcr:content/renditions/cq5dam.web.3840.3840.jpeg&#34;,&#34;defaultSource&#34;:true,&#34;dynamicImage&#34;:false,&#34;media&#34;:&#34;(min-width: 1px)&#34;,&#34;aspectImagePlaceholder&#34;:&#34;iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==&#34;}]}},&#34;headline&#34;:&#34;&lt;div style=\&#34;text-align: left;\&#34;>Strike Anywhere&lt;br />\r\n&lt;/div>\r\n&#34;,&#34;headlineStyle&#34;:&#34;fgx-brand-ds title-three ff-b&#34;,&#34;description&#34;:&#34;&lt;div style=\&#34;text-align: left;\&#34;>See the electric evolution of the Ford F-150.&lt;/div>\r\n&#34;,&#34;disclosures&#34;:&#34;&#34;,&#34;ctas&#34;:[{&#34;text&#34;:&#34;Experience F-150 Lightning&#34;,&#34;url&#34;:&#34;/content/brand_ford/en_us/brand/trucks/f150/f150-lightning/2022/immersive-augmented-reality.html?intcmp=hp-cta-arLanding-f-150lightning&#34;,&#34;target&#34;:&#34;_self&#34;,&#34;cssClass&#34;:&#34;btn btn-primary&#34;,&#34;ariaLabel&#34;:&#34;Click for the Augmented Reality F-150 Lightning experience&#34;}],&#34;metrics&#34;:{}}" data-overlay-item-trigger=".img-wrapper img" tabindex="0" role="button" data-fgx-keypress="true" data-fgx-billboard-img>
-            <div class="img-wrapper">
-                
-                    
-    <picture>
-        <!--[if IE 9]><video style="display: none;"><![endif]-->
-        
-            <source srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==" data-srcset="https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/re-hp/desktop/Strike_Anywhere_nn_Desktop.jpg/jcr:content/renditions/cq5dam.web.2160.2160.jpeg" media="(min-width: 1440px)"/>
-        
-            <source srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==" data-srcset="https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/re-hp/desktop/Strike_Anywhere_nn_Desktop.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg" media="(min-width: 992px)"/>
-        
-            <source srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR42mNgAAIAAAUAAen63NgAAAAASUVORK5CYII=" data-srcset="https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/re-hp/mobile/F150_StrikeAnywhere_Mobile.jpg/jcr:content/renditions/cq5dam.web.768.768.jpeg" media="(min-width: 768px)"/>
-        
-            <source srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR42mNgAAIAAAUAAen63NgAAAAASUVORK5CYII=" data-srcset="https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/re-hp/mobile/F150_StrikeAnywhere_Mobile.jpg/jcr:content/renditions/cq5dam.web.470.470.jpeg" media="(min-width: 1px)"/>
-        
-        <!--[if IE 9]></video><![endif]-->
-        <img src="https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/re-hp/desktop/Strike_Anywhere_nn_Desktop.jpg/_jcr_content/renditions/cq5dam.web.1440.1440.jpeg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAHElEQVR42u3BAQ0AAADCoPdPbQ43oAAAAADg0AAS2QABtrYahwAAAABJRU5ErkJggg==" data-srcset="https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/re-hp/desktop/Strike_Anywhere_nn_Desktop.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg" class="lazyload " alt="A view of the front grille of a Lightning F-150 with headlights shining."/>
-        
-    </picture>
-
-                
-            </div>
-            
-        </div>
-        <div class="lower-wrap card-content-wrap fgx-brand-global-container-pad">
-            <h3 class="feature-carousel-slide-subheadline fgx-brand-ds title-three ff-b fgx-brand-exlt-h2 fgx-brand-feat-h2-sm card-title"><div style="text-align: left;">Strike Anywhere<br />
-</div>
-</h3>
-            <div class=" slide-txt-wrap card-info-container">
-                <div class="ml-wrapper card-info ">
-                    <span class="description mltext fgx-brand-feat-body-copy fgx-brand-ds body-one ff-b"><div style="text-align: left;">See the electric evolution of the Ford F-150.</div>
-</span>
-                    <span class="description mltext description-more fgx-brand-feat-body-copy fgx-brand-ds body-one ff-b" style="display: none"><a href="javascript:void(0);" role="button" data-fgx-keypress="true" style="cursor:pointer;" class="lessDesc" data-fd-target-skip> ...less</a></span>
-                </div>
-                
-            </div>
-            <div class="card-footer-container brand-ds-icons ">
-                <div class="cta-wrap">
-                    <a class="btn btn-primary add-hover default-hover  " aria-label="Click for the Augmented Reality F-150 Lightning experience" target="_self" href="https://www.ford.com/trucks/f150/f150-lightning/2022/immersive-augmented-reality/?intcmp=hp-cta-arLanding-f-150lightning" tabindex="0">
-					   <span class="cta-text">Experience F-150 Lightning </span>
 					   
                        
                        
